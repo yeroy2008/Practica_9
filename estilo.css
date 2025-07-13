@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+.contenedor-principal{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.navbar{
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+.navbar-menu{
+    font-size: 1rem;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover{
+    color: aqua;
+    font-weight: 600;
+}
+
+.navbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/* menu hamburguesa icono*/
+.navbar-icono{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.menu-toggle{
+    display: none;
+}
+/* fin del diseño barra de navegacion*/
+
+
+
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.contenedor-carrusel-imagenes{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    animation: carrusel 10s infinite;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.contenedor-carrusel-imagenes div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    flex-shrink: 0;
+}
+
+.imagen1{
+    background-image: url(./imagenes/Carrusel/c1.jpeg);
+    position: relative;
+}
+.imagen2{
+    background-image: url(./imagenes/Carrusel/c2.jpeg);
+    position: relative;
+}
+.imagen3{
+    background-image: url(./imagenes/Carrusel/c3.jpeg);
+    position: relative;
+}
+
+@keyframes carrusel{
+    0% {transform: translateX(0%);}
+    20% {transform: translateX(0%);}
+    25% {transform: translateX(-100%);}
+    45% {transform: translateX(-100%);}
+    50% {transform: translateX(-200%);}
+    70% {transform: translateX(-200%);}
+    75%{ transform: translateX(-200%);}
+    100% {transform: translateX(0%);}
+}
+/* inicio de dieño card de prductos 1*/
+.contenedor-principal-card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.contenedor-card1{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contenedor-card1 .card-productos1{
+    width: 280px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 2px rgb(0,0 ,0 ,0.2 );
+    transition: all 0.25s;
+}
+.contenedor-card1 .card-productos1 img{
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+}
+.contenedor-card1 .card-productos1:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0 ,0 ,0.2 );
+}
+
+.contenedor-card1 .card-productos1 h4{
+    font-weight: bold;
+    padding-top:5px;
+}
+
+.contenedor-card1 .card-productos1 p{
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.contenedor-card1 .card-productos1 a{
+    font-weight:500 ;
+    text-decoration: none;
+    color: rgb(62, 12, 241);
+}
+/* fin diseño card de productos 1*/
+.contenedor-card2{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contenedor-card2 .card-productos2{
+    width: 230px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    object-fit: cover;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s;
+}
+.contenedor-card2 .card-productos2 img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.card-productos2 .cuerpo-card{
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    transition: all 0.25S;
+    height: 200PX;
+}
+.card-productos2 .cuerpo-card h4{
+    padding-bottom: 5px;
+}
+.card-productos2 .cuerpo-card p{
+    padding: 0 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+.card-productos2 .cuerpo-card a{
+        font-weight: 500;
+    text-decoration: none;
+    color: blue;
+}
+.contenedor-card2 .card-productos2:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+footer{
+    background-color: #515151;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+.contenedor-footer{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido-footer{
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.contenido-footer h4{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+
+}
+.contenido-footer p{
+    font-weight: 300;
+    padding-top: 20px;
+}
+.contenido-footer a{
+    padding-left: 5px;
+}
+.contenido-footer a img:hover{
+    transform: translateY(-5px);
+}
+/* fin del footer*/
+
+/* configurmos la pag de modo responsivo a cualquier dispositivo*/
+
+@media (max-width:1024px) {
+    .contenedor-carrusel-imagenes div{
+        max-height: 400px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-carrusel-imagenes div{
+        margin-top: 118px;
+        max-height: 350px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    /* monstramos icono de hamburguesa*/
+    .navbar-icono{
+        display: block;
+    }
+    /* ocultar el menu por defecto*/
+    .navbar-menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-heigth 0.3s ease;
+    }
+    
+    .menu-toggle:checked ~ .navbar-menu {
+        margin-top: 40px;
+        max-height: 400px;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+    }
+
+    .navbar-menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-link{
+        display: block;
+        padding: 0.5rem;
+    }
+    .contenedor-footer{
+        flex-direction:column;
+        align-items: center;
+    }   
+    .contenido-footer{
+        max-width: 100%;
+    }
+}
